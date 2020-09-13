@@ -1,0 +1,31 @@
+{
+    "name":"A Number to Word Converter",
+    "short_name":"Number2Word",
+    "start-url":".",
+    "display":"standalone",
+    "orientation":"portrait",
+    "background_color":"#ccc",
+    "theme_color":"#789876",
+    "icons":[
+        {
+            "src":"/img/img96.png",
+            "sizes":"96x96",
+            "type":"image/jpg"
+        },
+        {
+            "src":"/img/img144.png",
+            "sizes":"144x144",
+            "type":"image/jpg"
+        },
+        {
+            "src":"/img/img256.png",
+            "sizes":"256x256",
+            "type":"image/jpg"
+        }
+        ,       {
+            "src":"/img/img512.png",
+            "sizes":"512x512",
+            "type":"image/jpg"
+        }
+    ]
+}

@@ -1,0 +1,246 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="manifest.json">
+<script type="text/javascript">
+
+if('serviceWorker' in navigator){
+navigator.serviceWorker.register('/sw.js')
+   .then(function() {
+      console.log("sw register");
+  });
+}
+
+var m,n,c1;
+c1="";
+var a,b,c,i;
+function goo(){s
+if(i!=1){go(); i=1;}
+else{clear(); i=0;}
+}
+function clear(){
+document.getElementById("n").value="";
+document.getElementById("g").innerHTML="Go...";
+document.getElementById("dis").innerHTML=""; 
+document.getElementById("dis1").innerHTML="";
+c1="";
+}
+function go(){
+var aa=document.getElementById("n").value;
+a=aa;
+if(a<0){c1="minus ";
+a=Math.abs(a);
+}
+if(a==0){c1="zero";}
+else{
+if(a<1000000000000000)
+{if(a>9999999999999){
+c=a;
+c=Math.floor(c/10000000000000);
+b=Math.floor(a/100000000000000);
+if(c>20){
+pos1(b);
+c=c%10;
+if(c<10){pos(c);}
+}
+else{
+b=c;
+if(c>10){
+pos2(b);
+}
+else{if(c==10){c1=c1+"Ten";}
+      if(c<10){pos(c);} }
+}
+c1=c1+" Nil ";
+}
+ a=a%10000000000000;
+if(a<10000000000000)
+{if(a>99999999999){
+c=a;
+c=Math.floor(c/100000000000);
+b=Math.floor(a/1000000000000);
+if(c>20){
+pos1(b);
+c=c%10;
+if(c<10){pos(c);}
+}
+else{
+b=c;
+if(c>10){
+pos2(b);
+}
+else{if(c==10){c1=c1+"Ten";}
+      if(c<10){pos(c);} }
+}
+c1=c1+" Kharab ";
+}
+ a=a%100000000000;
+if(a<100000000000)
+{if(a>999999999){
+c=a;
+c=Math.floor(c/1000000000);
+b=Math.floor(a/10000000000);
+if(c>20){
+pos1(b);
+c=c%10;
+if(c<10){pos(c);}
+}
+else{
+b=c;
+if(c>10){
+pos2(b);
+}
+else{if(c==10){c1=c1+"Ten";}
+      if(c<10){pos(c);} }
+}
+c1=c1+" Arab ";
+}
+ a=a%1000000000;
+if(a<1000000000)
+{if(a>9999999){
+c=a;
+c=Math.floor(c/10000000);
+b=Math.floor(a/100000000);
+if(c>20){
+pos1(b);
+c=c%10;
+if(c<10){pos(c);}
+}
+else{
+b=c;
+if(c>10){
+pos2(b);
+}
+else{if(c==10){c1=c1+"Ten";}
+      if(c<10){pos(c);} }
+}
+c1=c1+" Crore ";
+}
+a=a%10000000;
+if(a<10000000)
+{if(a>99999){
+c=a;
+c=Math.floor(c/100000);
+b=Math.floor(a/1000000);
+if(c>20){
+pos1(b);
+c=c%10;
+if(c<10){pos(c);}
+}
+else{
+b=c;
+if(c>10){
+pos2(b);
+}
+else{if(c==10){c1=c1+"Ten";}
+      if(c<10){pos(c);} }
+}
+c1=c1+" Lac ";
+}
+
+a=a%100000;
+if(a<100000)
+{if(a>999){
+c=a;
+c=Math.floor(c/1000);
+b=Math.floor(a/10000);
+if(c>20){
+pos1(b);
+c=c%10;
+if(c<10){pos(c);}
+}
+else{
+b=c;
+if(c>10){
+pos2(b);
+}
+else{if(c==10){c1=c1+"Ten";}
+      if(c<10){pos(c);} }
+}
+c1=c1+" Thousand ";
+}
+a=a%1000;
+ if(a<1000){
+b=Math.floor(a/100);
+if(b!=0){
+pos(b);
+c1=c1+" Hundred ";
+}
+a=a%100;
+b=Math.floor(a/10);
+if(a>20){
+pos1(b);
+a=a%10;
+if(a<10){pos(a);}
+}
+else{
+b=a;
+if(a>10){
+pos2(b);
+}
+else{if(a==10){c1=c1+"Ten";}
+      if(a<10){pos(a);} }
+}
+}
+}
+}
+}
+}
+}
+}
+
+else{c1="Out Of Range.."}
+}
+document.getElementById("dis").innerHTML=c1;
+document.getElementById("dis1").innerHTML=aa;
+document.getElementById("g").innerHTML="Clear";
+}
+function pos(n1){
+ if(n1==1){c1=c1+" One";}
+ if(n1==2){c1=c1+" Two";}
+ if(n1==3){c1=c1+" Three";}
+ if(n1==4){c1=c1+" Four";}
+ if(n1==5){c1=c1+" Five";}
+ if(n1==6){c1=c1+" Six";}
+ if(n1==7){c1=c1+" Seven";}
+ if(n1==8){c1=c1+" Eight";}
+ if(n1==9){c1=c1+" Nine";}
+}
+function pos1(n1){
+ if(n1==2){c1=c1+" Twenty";}
+ if(n1==3){c1=c1+" Thirty";}
+ if(n1==4){c1=c1+" Forty";}
+ if(n1==5){c1=c1+" Fifty";}
+ if(n1==6){c1=c1+" Sixty";}
+ if(n1==7){c1=c1+" Seventy";}
+ if(n1==8){c1=c1+" Eighty";}
+ if(n1==9){c1=c1+" Ninty";}
+}
+function pos2(n1){
+ if(n1==11){c1=c1+" Eleven";}
+ if(n1==12){c1=c1+" Twelve";}
+ if(n1==13){c1=c1+" Thirteen";}
+ if(n1==14){c1=c1+" Fourteen";}
+ if(n1==15){c1=c1+" Fifteen";}
+ if(n1==16){c1=c1+" Sixteen";}
+ if(n1==17){c1=c1+" Seventeen";}
+ if(n1==18){c1=c1+" Eighteen";}
+ if(n1==19){c1=c1+" Nineteen";}
+}
+</script>
+</head>
+<body style="font-family:montserrat; background-image:linear-gradient(70deg,#19dbfb,#b8e994);">
+<h1><center><u><b>Number To Word <br>Converter</b></u></center></h1><br>
+<font size="28">
+<p><input type="number" id="n" placeholder="Enter Number" style="border:none; background:none; border-bottom:2px solid #000; font-size:25; width:220px; outline:none; overflow:hidden;"><br><br>
+<button id="g" onclick="goo()" style="font-size:30; background:linear-gradient(90deg,#feca57,#e55039); display:inline-block; padding: 3px 5px; outline:none;
+margin: 4px 0; text-decoration: none; border:none; border-radius:40px;">Go...</button></p></font>
+<h4 id="dis" style="font-size:24;letter-spacing:0.5; font-family:arial;"></h4>
+<h4 id="dis1"></h4>
+
+                                 
+                                                                            
+                            
+                            
+</body>
+</html>
