@@ -10,22 +10,22 @@
         {
             "src":"/img/img96.png",
             "sizes":"96x96",
-            "type":"image/jpg"
+            "type":"image/png"
         },
         {
             "src":"/img/img144.png",
             "sizes":"144x144",
-            "type":"image/jpg"
+            "type":"image/png"
         },
         {
             "src":"/img/img256.png",
             "sizes":"256x256",
-            "type":"image/jpg"
+            "type":"image/png"
         }
         ,       {
             "src":"/img/img512.png",
             "sizes":"512x512",
-            "type":"image/jpg"
+            "type":"image/png"
         }
     ]
 }
