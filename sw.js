@@ -6,10 +6,10 @@ self.addEventListener('install', function(event){
             cache.addAll([
                 '/',
                 '/index.html',
-                '/img/img144.png',
-                '/img/img256.png',
-                '/img/img512.png',
-                '/img/img96.png'
+                '/img/img144.jpg',
+                '/img/img256.jpg',
+                '/img/img512.jpg',
+                '/img/img96.jpg'
             ]);
         })
     );
